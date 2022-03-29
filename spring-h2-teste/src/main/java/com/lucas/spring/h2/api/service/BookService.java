@@ -16,11 +16,7 @@ public class BookService {
 	BookRepository bookRepository;
 
 	public Book addBook(Book book) {
-		Book b = new Book();
-		b.setId(Long.valueOf(listAllBooks().size() + 1));
-		b.setBookName(book.getBookName());
-		b.setIdPerson(book.getIdPerson());
-		return bookRepository.save(b);
+		return bookRepository.save(book);
 	}
 
 	public List<Book> listAllBooks() {

@@ -14,6 +14,8 @@ public class PersonService {
 	PersonRepository personRepository;
 	
 	public Person addPerson(Person person) {
+		Person p = new Person();
+		p.setId(person.getId());
 		return personRepository.save(person);
 	}
 	
